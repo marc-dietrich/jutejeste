@@ -82,32 +82,32 @@
   cursor: pointer;
 }
 
-/* Hidden content box */
-.dropdown-box {
-  display: none;
-  position: absolute;
-  top: 110%;
-
-  /* center horizontally */
-  left: 50%;
-  transform: translateX(-50%);
-
-  /* auto width based on content */
-  width: auto;
-  max-width: 90vw;       /* prevents it from overflowing on mobile */
-  white-space: nowrap;   /* prevents line breaks from shrinking width */
-
-  background: white;
-  color: var(--text);
-  padding: 1rem;
-  border: 2px solid var(--text);
-  border-radius: 10px;
-  z-index: 10;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  list-style: none;
 }
 
+/* Dropdown content box */
+.dropdown-box {
+  display: none;
 
-/* Show on hover */
+  border: 2px solid var(--text);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  width: 60vw;
+  min-width: 300px;
+
+    /* --- Center across the screen --- */
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  top: 110%;                 /* below the button */
+}
+
+/* Show on click/toggle */
 .dropdown.open .dropdown-box {
   display: block;
 }
@@ -166,4 +166,49 @@
 
 #footer .icon {
   font-size: 2rem;
+}
+
+.dropdown-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+}
+
+.dropdown-img img {
+  width: 100%;        /* nice fixed size */
+  height: auto;
+  padding: 0%;
+  object-fit: contain;
+  pointer-events: none; /* prevents weird click behavior */
+}
+
+/* The floating dropdown box */
+#dropdown-global {
+  display: none;
+  position: fixed;            /* 🔥 fixed to page, not <li> */
+  top: 110px;                 /* adjust depending on header height */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 80vw;                /* centered full width */
+  max-width: 800px;
+  padding: 0%;
+
+  background: white;
+  border: 2px solid var(--text);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* When active */
+#dropdown-global.open {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }

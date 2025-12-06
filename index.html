@@ -13,7 +13,7 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-     <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -24,7 +24,9 @@
     <div id="wrapper">
       <!-- Header -->
       <header id="header" class="alt">
-        <span class="logo"><img src="images/logo.jpg" alt="" /></span>
+        <span class="logo"
+          ><img src="images/jutejesteTitleBadge.png" alt=""
+        /></span>
         <p>Die Gute Geste mit Dialekt!</p>
       </header>
 
@@ -33,7 +35,7 @@
         <ul>
           <li><a href="#intro" class="active">Philosophie</a></li>
           <li><a href="#first">Termine</a></li>
-           <li><a href="#third">Support</a></li>
+          <li><a href="#third">Support</a></li>
           <li><a href="pdfs/vereinssatzung.pdf" download>Verein</a></li>
           <li>
             <!--a href="pdfs/mitglied-werden.pdf" download>Mitglied werden</a-->
@@ -52,16 +54,17 @@
                 <h2>Über Uns</h2>
               </header>
               <p class="justified">
-                Wir sind 7 junge Erwachsene die eine Vision hatten: Einen Verein
-                gründen, der in Jessen und Umgebung wieder mehr Leben bringt.
-                Deshalb werden wir in Zukunft für euch, jung und alt,
-                Veranstaltungen organisieren, damit endlich wieder was los ist!
-                Dabei wollen wir diverse Turniere, Diskos und vieles mehr
-                planen. Euer Kommen sorgt für etwas Gutes. Der Gewinn aus den
-                Veranstaltungen wird zum größten Teil gespendet. Vor allem die
-                Abschlussjahrgänge des Gymnasium Jessen sollen die Möglichkeit
-                haben durch unsere Unterstützung einen unvergesslichen
-                Abschlussball haben zu können.
+                Wir sind eine gemischte Truppe Menschen, die eine Vision haben:
+                in Jessen und Umgebung mehr Leben bringen. Deshalb werden wir in
+                Zukunft für euch, Jung und Alt, Veranstaltungen organisieren und
+                durchführen. Dabei wollen wir diverse Turniere, Diskos und
+                vieles mehr planen. Die gute Geste steht im Vordergrund, dazu
+                gehört zum Beispiel den Abiturjahrgängen des Gymnasiums Jessen
+                unter die Arme zu greifen und unsere Hilfe bei der
+                Verwirklichung ihrer Veranstaltungen anzubieten. Natürlich
+                unterstützen wir auch gern andere Vereine in der Region Jessen
+                und sind dafür, die Gemeinschaft zu stärken. Meldet euch daher
+                gern bei uns, wir schauen was wir machen können!
               </p>
               <!--ul class="actions">
                 <li><a href="generic.html" class="button">Learn More</a></li>
@@ -168,77 +171,101 @@
           <header class="major">
             <h2>Support</h2>
             <p>
-              Bei jedem Event entstehen Kosten. 
-              Wir planen so, dass alles gedeckt ist und Getränke & Co. trotzdem erschwinglich bleiben. 
-              Mit einer Spende helft ihr uns, sicherer zu planen und alle zu entlasten.
+              Bei jedem Event entstehen Kosten. Wir planen so, dass alles
+              gedeckt ist und Getränke & Co. trotzdem erschwinglich bleiben. Mit
+              einer Spende helft ihr uns, sicherer zu planen und alle zu
+              entlasten.
             </p>
           </header>
           <footer class="major">
             <ul class="actions special">
               <li class="dropdown">
-                <a class="button dropdown-toggle">Wie funktioniert's?</a>
-                <div class="dropdown-box">
-                  <p>
-                    Einfach per Überweisung an unser <br>
-                    IBAN: DE 0123 5668 9012 3456 <br><br>
-                    Bitte gibt im Verwendungzweck: <br>
-                    1: deinen Namen und Adresse an damit wir die Spendenquittung ausstellen können <br>
-                    2: eine Anmerkung dazu, falls du <strong><u>nicht</u></strong> in der Übersicht unserer Spender gelistet werden willst
-                  </p>
-                </div>
+                <a class="button dropdown-toggle" id="howto-btn"
+                  >Wie funktioniert's?</a
+                >
               </li>
 
               <li>
-  <a href="#" class="button" onclick="showSupporterToast(); return false;">
-    Unsere Supporter
-  </a>
-</li>
+                <a
+                  href="#"
+                  class="button"
+                  onclick="showSupporterToast(); return false;"
+                >
+                  Unsere Supporter
+                </a>
+              </li>
             </ul>
+            <div id="dropdown-global" class="dropdown-box">
+              <span class="dropdown-img">
+                <img src="images/how-to-donate.png" alt="" />
+              </span>
+            </div>
           </footer>
         </section>
+
+        <!--section class="main special nav-alt">
+          <div class="nav-alt-design">
+            <button class="button">test1</button>
+            <button class="button">test2</button>
+          </div>
+        </section-->
       </div>
 
       <!-- Footer -->
-<footer id="footer">
-  <h2>Impressum</h2>
+      <footer id="footer">
+        <h2>Impressum</h2>
 
-  <div class="impressum-grid">
+        <div class="impressum-grid">
+          <div class="impressum-item">
+            <h3>Angaben gemäß §5 TMG:</h3>
+            <p>
+              Jute Jeste e.V. <br />
+              Rosa-Luxemburg-Straße 41 <br />
+              06917 Jessen (Elster)
+            </p>
+          </div>
 
-    <div class="impressum-item">
-      <h3>Vereinsname</h3>
-      <p>Jute Jeste e.V.</p>
-    </div>
+          <div class="impressum-item">
+            <h3>Registereintrag</h3>
+            <p>Eintrag im Vereinsregister</p>
+            <p>Registergericht Amtsgericht Stendal</p>
+            <p>Registernummer: VR7046</p>
+          </div>
 
-    <div class="impressum-item">
-      <h3>Vertretung</h3>
-      <p> ... </p>
-    </div>
+          <div class="impressum-item">
+            <h3>Vertreten durch:</h3>
+            <p>Vertreten durch den Vorstand</p>
+          </div>
 
-    <div class="impressum-item">
-      <h3>Adresse</h3>
-      <p>
-        Musterstraße 12<br>
-        06917 Jessen (Elster)
-      </p>
-    </div>
+          <div class="impressum-item">
+            <h3>Kontakt</h3>
+            <p>
+              <a href="mailto:info@jutejeste.de">info@jutejeste.de</a>
+            </p>
+          </div>
 
-    <div class="impressum-item">
-      <h3>Email</h3>
-      <p><a href="mailto:jute.jeste@gmail.com">jute.jeste@gmail.com</a></p>
-    </div>
+          <div class="impressum-item">
+            <h3>TODO</h3>
+            <a>Haftungsausschluss</a>
+          </div>
 
-  </div>
+          <div class="impressum-item">
+            <h3>TODO</h3>
+            <a>datenschutz</a>
+          </div>
+        </div>
 
-  <ul class="icons">
-    <li>
-      <a href="https://www.instagram.com/jutejeste/" class="icon brands fa-instagram">
-        <span class="label">Instagram</span>
-      </a>
-    </li>
-  </ul>
-</footer>
-
-
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.instagram.com/jutejeste/"
+              class="icon brands fa-instagram"
+            >
+              <span class="label">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
 
       <div id="toast">
         Danke für dein Interesse, aber wir können zur Zeit keine weiteren
@@ -256,22 +283,38 @@
         }
       </script>
       <script>
-      document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
-        e.preventDefault();
-        this.parentElement.classList.toggle('open');
-      });
-    </script>
-    <script>
-function showSupporterToast() {
-  const toast = document.getElementById("supporter-toast");
-  toast.classList.add("show");
+        document
+          .querySelector(".dropdown-toggle")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("open");
+          });
+      </script>
+      <script>
+        function showSupporterToast() {
+          const toast = document.getElementById("supporter-toast");
+          toast.classList.add("show");
 
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2500); // disappears after 2.5 seconds
-}
-</script>
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 2500); // disappears after 2.5 seconds
+        }
+      </script>
+      <script>
+        const btn = document.getElementById("howto-btn");
+        const dropdown = document.getElementById("dropdown-global");
 
+        btn.addEventListener("click", () => {
+          dropdown.classList.toggle("open");
+        });
+
+        // Optional: click outside → close
+        document.addEventListener("click", (e) => {
+          if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove("open");
+          }
+        });
+      </script>
     </div>
 
     <!-- Scripts -->
