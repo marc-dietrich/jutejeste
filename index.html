@@ -54,9 +54,9 @@
                 <h2>Über Uns</h2>
               </header>
               <p class="justified">
-                Wir sind eine gemischte Truppe Menschen, die eine Vision haben:
-                in Jessen und Umgebung mehr Leben bringen. Deshalb werden wir in
-                Zukunft für euch, Jung und Alt, Veranstaltungen organisieren und
+                Wir sind eine gemischte Truppe, die eine Vision hatte: in Jessen
+                und Umgebung mehr Leben bringen. Deshalb werden wir in Zukunft
+                für euch, Jung und Alt, Veranstaltungen organisieren und
                 durchführen. Dabei wollen wir diverse Turniere, Diskos und
                 vieles mehr planen. Die gute Geste steht im Vordergrund, dazu
                 gehört zum Beispiel den Abiturjahrgängen des Gymnasiums Jessen
@@ -185,12 +185,8 @@
                 >
               </li>
 
-              <li>
-                <a
-                  href="#"
-                  class="button"
-                  onclick="showSupporterToast(); return false;"
-                >
+              <li class="dropdown">
+                <a class="button dropdown-toggle" id="donator-btn">
                   Unsere Supporter
                 </a>
               </li>
@@ -198,6 +194,21 @@
             <div id="dropdown-global" class="dropdown-box">
               <span class="dropdown-img">
                 <img src="images/how-to-donate.webp" alt="" />
+                <p>
+                  Einfach per Überweisung an: <br />
+                  IBAN: DE 6061 0620 0863 0205 9900<br /><br />
+                  Bitte gib im Verwendungszweck: <br /><br />
+                  1. deinen Namen und Adresse an, damit wir die Spendenquittung
+                  ausstellen können <br /><br />
+                  2. eine Anmerkung, falls du <u>nicht</u> in der Übersicht
+                  unserer Spender genannt werden möchtest
+                </p>
+              </span>
+            </div>
+
+            <div id="dropdown-global-donator" class="dropdown-box">
+              <span class="dropdown-img">
+                <img src="images/donators.webp" alt="" />
               </span>
             </div>
           </footer>
@@ -251,7 +262,7 @@
 
           <div class="impressum-item">
             <h3>TODO</h3>
-            <a>datenschutz</a>
+            <a>Datenschutz</a>
           </div>
         </div>
 
@@ -291,14 +302,33 @@
           });
       </script>
       <script>
-        function showSupporterToast() {
+        /*function showSupporterToast() {
           const toast = document.getElementById("supporter-toast");
           toast.classList.add("show");
 
           setTimeout(() => {
             toast.classList.remove("show");
           }, 2500); // disappears after 2.5 seconds
-        }
+        }*/
+        const donatorBtn = document.getElementById("donator-btn");
+        const donatorDropdown = document.getElementById(
+          "dropdown-global-donator"
+        );
+
+        donatorBtn.addEventListener("click", (e) => {
+          e.stopPropagation(); // 🔑 THIS is the fix
+          donatorDropdown.classList.toggle("open");
+          console.log("test")
+        });
+
+        document.addEventListener("click", (e) => {
+          if (
+            !donatorBtn.contains(e.target) &&
+            !donatorDropdown.contains(e.target)
+          ) {
+            donatorDropdown.classList.remove("open");
+          }
+        });
       </script>
       <script>
         const btn = document.getElementById("howto-btn");

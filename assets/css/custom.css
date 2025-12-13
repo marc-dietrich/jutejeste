@@ -212,3 +212,44 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+.dropdown-img p {
+  position: absolute;
+  margin: 0;
+  max-width: 90%;
+  font-size: clamp(0.65rem, 2.5vw, 1.2rem);
+
+  color: var(--secondary);              /* change as needed */
+  font-weight: bold;
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;      /* text doesn't block clicks */
+}
+
+/* The floating dropdown box */
+#dropdown-global-donator {
+  display: none;
+  position: fixed;            /* 🔥 fixed to page, not <li> */
+  top: 110px;                 /* adjust depending on header height */
+
+  width: 80vw;                /* centered full width */
+  max-width: 400px;
+  padding: 0%;
+
+  background: white;
+  border: 2px solid var(--text);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* When active */
+#dropdown-global-donator.open {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
