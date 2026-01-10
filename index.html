@@ -36,7 +36,7 @@
           <li><a href="#intro" class="active">Philosophie</a></li>
           <li><a href="#first">Termine</a></li>
           <li><a href="#third">Support</a></li>
-          <li><a href="pdfs/vereinssatzung.pdf" download>Verein</a></li>
+          <!-- li><a href="pdfs/vereinssatzung.pdf" download>Verein</a></li-->
           <li>
             <!--a href="pdfs/mitglied-werden.pdf" download>Mitglied werden</a-->
             <a href="#" onclick="showToast(); return false;">Mitglied werden</a>
@@ -96,10 +96,12 @@
             </li>
 
             <li>
-              <span class="circle-img">
-                <img src="images/pic04.webp" alt="" />
-              </span>
-              <h3>Alles auf einen Blick</h3>
+              <a href="events.html" class="click-card">
+                <span class="circle-img">
+                  <img src="images/pic04.webp" alt="" />
+                </span>
+                <h3>Alles auf einen Blick</h3>
+              </a>
             </li>
           </ul>
 
@@ -170,7 +172,7 @@
         <section id="third" class="main special">
           <header class="major">
             <h2>Support</h2>
-            <p>
+            <p class="justified">
               Bei jedem Event entstehen Kosten. Wir planen so, dass alles
               gedeckt ist und Getränke & Co. trotzdem erschwinglich bleiben. Mit
               einer Spende helft ihr uns, sicherer zu planen und alle zu
@@ -189,6 +191,15 @@
                 <a class="button dropdown-toggle" id="donator-btn">
                   Unsere Supporter
                 </a>
+              </li>
+
+              <li class="dropdown">
+                <a
+                  href="pdfs/vereinssatzung.pdf"
+                  download
+                  class="button dropdown-toggle"
+                  >Für Interessierte</a
+                >
               </li>
             </ul>
             <div id="dropdown-global" class="dropdown-box">
@@ -318,7 +329,7 @@
         donatorBtn.addEventListener("click", (e) => {
           e.stopPropagation(); // 🔑 THIS is the fix
           donatorDropdown.classList.toggle("open");
-          console.log("test")
+          console.log("test");
         });
 
         document.addEventListener("click", (e) => {

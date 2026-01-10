@@ -253,3 +253,29 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+  .click-card {
+    text-decoration: none;   /* 🚫 no underline */
+    color: inherit;
+    cursor: pointer;
+  }
+
+  /* Hover / Touch feedback */
+  .click-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .click-card img {
+    transition: transform 0.2s ease;
+  }
+
+  /* Optional: leichtes Highlight */
+  .click-card:hover h3 {
+    opacity: 0.85;
+  }
+
+  /* Accessibility */
+  .click-card:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 4px;
+  }
