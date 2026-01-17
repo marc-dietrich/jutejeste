@@ -1,0 +1,90 @@
+@import './styles/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Source Sans Pro', system-ui, sans-serif;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+
+
+@layer base {
+  :root {
+    --background: 30 100% 91%; /* #ffebd3 */
+    --foreground: 101 22% 23%; /* #38442e */
+    --card: 0 0% 100%;
+    --card-foreground: 101 22% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 101 22% 23%;
+    --primary: 96 14% 41%; /* #68775c */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 27 66% 51%; /* #d4742d */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 33 38% 80%;
+    --muted-foreground: 101 15% 35%;
+    --accent: 27 66% 51%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 96 14% 41%;
+    --input: 96 14% 41%;
+    --ring: 27 66% 51%;
+    --chart-1: 27 66% 51%;
+    --chart-2: 96 14% 41%;
+    --chart-3: 101 22% 23%;
+    --chart-4: 33 38% 80%;
+    --chart-5: 30 100% 91%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
