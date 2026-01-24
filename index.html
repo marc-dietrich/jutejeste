@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="de">
   <head>
     <title>Jute Jeste</title>
     <meta charset="utf-8" />
@@ -28,7 +28,7 @@
         <span class="logo"
           ><!--img src="images/jutejesteTitleBadge.webp" alt=""
         /-->
-      <h1 style="font-size: 7rem;">Jute Jeste</h1></span>
+      <h1 style="font-size: clamp(4rem, 6vw, 7rem);">Jute Jeste</h1>
         <p>Die Gute Geste mit Dialekt!</p>
       </header>
 
@@ -62,7 +62,7 @@
               <header class="major">
                 <h2>Über Uns</h2>
               </header>
-              <p class="justified">
+              <p style="text-align: justify; text-align-last: center; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;">
                 Wir sind eine gemischte Truppe, die eine Vision hatte: in Jessen
                 und Umgebung mehr Leben bringen. Deshalb werden wir in Zukunft
                 für euch, Jung und Alt, Veranstaltungen organisieren und
@@ -98,15 +98,22 @@
               <span class="circle-img">
                 <img src="images/pic03.webp" alt="" />
               </span>
-              <h3>Das steht als nächstes an</h3>
+              <h3>Als nächstes</h3>
             </li>
 
             <li id="events-trigger">
               <span class="circle-img">
                 <img src="images/pic04.webp" alt="" />
               </span>
-              <h3>Alles auf einen Blick</h3>
+              <h3>Auf einen Blick</h3>
             </li>
+
+            <!--li id="events-trigger">
+              <span class="circle-img">
+                <img src="images/pic04.webp" alt="" />
+              </span>
+              <h3>Beispiel</h3>
+            </li-->
           </ul>
 
           <div id="dropdown-global-events" class="dropdown-box">
@@ -205,7 +212,7 @@
         <section id="third" class="main special">
           <header class="major">
             <h2>Support</h2>
-            <p class="justified">
+            <p style="text-align: justify; text-align-last: center; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;">
               Bei jedem Event entstehen Kosten. Wir planen so, dass alles
               gedeckt ist und Getränke & Co. trotzdem erschwinglich bleiben. Mit
               einer Spende helft ihr uns, sicherer zu planen und alle zu
@@ -362,7 +369,6 @@
         donatorBtn.addEventListener("click", (e) => {
           e.stopPropagation(); // 🔑 THIS is the fix
           donatorDropdown.classList.toggle("open");
-          console.log("test");
         });
 
         document.addEventListener("click", (e) => {

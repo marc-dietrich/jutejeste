@@ -1,10 +1,9 @@
-
 .justified {
   text-align: justify;
   text-align-last: center;
 }
 
-#toast{
+#toast {
   visibility: hidden;
   opacity: 0;
   min-width: 260px;
@@ -17,12 +16,14 @@
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
   z-index: 9999;
   font-size: 15px;
 }
 
-#toast.show{
+#toast.show {
   visibility: visible;
   opacity: 1;
 }
@@ -40,7 +41,9 @@
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
   z-index: 9999;
   font-size: 15px;
 }
@@ -50,24 +53,29 @@
   visibility: visible;
 }
 
-
 .circle-img {
-  width: 70%;           
-   aspect-ratio: 1 / 1; 
-  border-radius: 50%;       /* makes the circle */
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%; /* makes the circle */
   border: 6px solid var(--text); /* orange border like your example */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;          /* crops image inside circle */
+  overflow: hidden; /* crops image inside circle */
   background-color: #f6e6cc; /* optional beige background */
-  margin: 0 auto 1rem auto;  /* center + spacing */
+  margin: 0 auto 1rem auto; /* center + spacing */
+}
+
+@media screen and (max-width: 736px) {
+  .circle-img {
+    border: 3px solid var(--text); /* orange border like your example */
+  }
 }
 
 .circle-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* makes image fill circle */
+  object-fit: cover; /* makes image fill circle */
 }
 
 /* Container */
@@ -90,21 +98,21 @@
 
 /* Dropdown content box */
 .dropdown-box {
-  display: none;
+  display: none; /* hidden by default */
 
   border: 2px solid var(--text);
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 
   width: 60vw;
   min-width: 300px;
 
-    /* --- Center across the screen --- */
+  /* --- Center across the screen --- */
   left: 0;
   right: 0;
   margin: auto;
 
-  top: 110%;                 /* below the button */
+  top: 110%; /* below the button */
 }
 
 /* Show on click/toggle */
@@ -123,10 +131,10 @@
 /* Grid for the impressum items */
 #footer .impressum-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* 2 columns */
-  gap: 2rem 3rem;                    /* row-gap / column-gap */
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 2rem 3rem; /* row-gap / column-gap */
   width: 100%;
-  max-width: 700px;                  /* optional for better look */
+  max-width: 700px; /* optional for better look */
   margin-bottom: 2rem;
 }
 
@@ -176,7 +184,7 @@
 }
 
 .dropdown-img img {
-  width: 100%;        /* nice fixed size */
+  width: 100%; /* nice fixed size */
   height: auto;
   padding: 0%;
   object-fit: contain;
@@ -185,20 +193,20 @@
 
 /* The floating dropdown box */
 #dropdown-global {
-  display: none;
-  position: fixed;            /* 🔥 fixed to page, not <li> */
-  top: 110px;                 /* adjust depending on header height */
+  display: block;
+  position: fixed; /* 🔥 fixed to page, not <li> */
+  top: 110px; /* adjust depending on header height */
   left: 50%;
   transform: translateX(-50%);
 
-  width: 80vw;                /* centered full width */
+  width: 80vw; /* centered full width */
   max-width: 800px;
   padding: 0%;
 
   background: white;
   border: 2px solid var(--text);
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   z-index: 9999;
 
   opacity: 0;
@@ -208,9 +216,14 @@
 
 /* When active */
 #dropdown-global.open {
-  display: block;
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s ease;
+  transition-delay: 0.05s;
 }
 
 .dropdown-img p {
@@ -219,65 +232,76 @@
   max-width: 90%;
   font-size: clamp(0.65rem, 2.5vw, 1.2rem);
 
-  color: var(--secondary);              /* change as needed */
+  color: var(--secondary); /* change as needed */
   font-weight: bold;
   text-align: center;
   white-space: normal;
-  pointer-events: none;      /* text doesn't block clicks */
+  pointer-events: none; /* text doesn't block clicks */
 }
 
 /* The floating dropdown box */
 #dropdown-global-donator {
-  display: none;
-  position: fixed;            /* 🔥 fixed to page, not <li> */
-  top: 110px;                 /* adjust depending on header height */
+  display: block;
+  position: fixed; /* 🔥 fixed to page, not <li> */
+  top: 110px; /* adjust depending on header height */
 
-  width: 80vw;                /* centered full width */
+  width: 80vw; /* centered full width */
   max-width: 400px;
   padding: 0%;
 
   background: white;
   border: 2px solid var(--text);
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   z-index: 9999;
 
   opacity: 0;
+  transform: translateY(8px) scale(0.96);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
   pointer-events: none;
-  transition: opacity 0.25s ease;
 }
 
 #events-trigger {
   cursor: pointer;
 }
 
-
 /* ===== Global Events Dropdown ===== */
 #dropdown-global-events {
-  display: none;
-  position: fixed;            /* 🔥 fixed to page, not <li> */
-  top: 110px;                 /* adjust depending on header height */
+  display: block; /* required */
+  position: fixed; /* 🔥 fixed to page, not <li> */
+  top: 110px; /* adjust depending on header height */
 
-  width: 80vw;                /* centered full width */
+  width: 80vw; /* centered full width */
   max-width: 400px;
   padding: 0%;
 
   background: white;
   border: 2px solid var(--text);
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   z-index: 9999;
 
   opacity: 0;
+  transform: translateY(8px) scale(0.96);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
   pointer-events: none;
-  transition: opacity 0.25s ease;
 }
 
 /* Active / visible state */
 #dropdown-global-events.open {
-  display: block;
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s ease;
+  transition-delay: 0.05s;
 }
 
 #dropdown-global-events .dropdown-img {
@@ -295,33 +319,39 @@
 
 /* When active */
 #dropdown-global-donator.open {
-  display: block;
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s ease;
+  transition-delay: 0.05s;
 }
 
-  .click-card {
-    text-decoration: none;   /* 🚫 no underline */
-    color: inherit;
-    cursor: pointer;
-  }
+.click-card {
+  text-decoration: none; /* 🚫 no underline */
+  color: inherit;
+  cursor: pointer;
+}
 
-  /* Hover / Touch feedback */
-  .click-card:hover img {
-    transform: scale(1.05);
-  }
+/* Hover / Touch feedback */
+.click-card:hover img {
+  transform: scale(1.05);
+}
 
-  .click-card img {
-    transition: transform 0.2s ease;
-  }
+.click-card img {
+  transition: transform 0.2s ease;
+}
 
-  /* Optional: leichtes Highlight */
-  .click-card:hover h3 {
-    opacity: 0.85;
-  }
+/* Optional: leichtes Highlight */
+.click-card:hover h3 {
+  opacity: 0.85;
+}
 
-  /* Accessibility */
-  .click-card:focus-visible {
-    outline: 2px solid #000;
-    outline-offset: 4px;
-  }
+/* Accessibility */
+.click-card:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}

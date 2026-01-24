@@ -2956,6 +2956,7 @@ table.alt tbody tr td {
   }
 }
 
+/*
 @media screen and (max-width: 736px) {
   .features {
     width: 100%;
@@ -2972,7 +2973,7 @@ table.alt tbody tr td {
   .features li:nth-child(3) {
     margin-top: 2em;
   }
-}
+}*/
 
 /* Statistics */
 
