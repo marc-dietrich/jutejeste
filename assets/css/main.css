@@ -2946,6 +2946,16 @@ table.alt tbody tr td {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 4980px) {
+  .features li {
+    width: calc(40% - 2em);
+  }
+
+  .features li:nth-child(3) {
+    margin-top: 3em;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .features li {
     width: calc(50% - 2em);
