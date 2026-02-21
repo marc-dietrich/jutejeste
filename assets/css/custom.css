@@ -180,12 +180,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
   padding: 0%;
 }
 
 .dropdown-img img {
   width: 100%; /* nice fixed size */
   height: auto;
+  border-radius: 8px;
   padding: 0%;
   object-fit: contain;
   pointer-events: none; /* prevents weird click behavior */
@@ -313,6 +316,7 @@
 #dropdown-global-events img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
   object-fit: contain;
   display: block;
 }
